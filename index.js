@@ -6,6 +6,7 @@ class Formatter {
   }
   
   static sanitize(string){
+<<<<<<< HEAD
     return string.replace( /[^A-Za-z0-9 '-]/g, '' )
   }
   
@@ -30,4 +31,13 @@ class Formatter {
     }
     return result.join( " " );
   }
+=======
+    return string.replace(/[^A-Za-z0-9-']+/g)
+  }
+  
+  static titleize(string){
+    return string.capitalize + string.replace(/[^A-Za-z0-9-']+/g, '')
+  }
+  
+>>>>>>> f1339b78125e7a2b425ee59e1c06516467dcfed4
 }
